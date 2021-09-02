@@ -1,0 +1,5 @@
+module fx03_scene {
+	requires javafx.controls;
+	
+	opens application to javafx.graphics, javafx.fxml;
+}

@@ -1,0 +1,28 @@
+package label;
+
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
+
+public class Ex03 extends Application{
+	public static void main(String[] args) {
+		launch(args);
+	}
+	
+	@Override
+	public void start(Stage arg0) throws Exception {
+		HBox hb = new HBox();
+		hb.setPadding(new Insets(10));
+		
+		Label lb1 = new Label("A label that needs to be wrapped");
+		hb.getChildren().addAll(lb1);
+		hb.setPrefSize(100, 100);
+		
+		arg0.setScene(new Scene(hb));
+		arg0.show();
+	}
+
+}

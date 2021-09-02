@@ -1,0 +1,30 @@
+package label;
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Font;
+import javafx.stage.Stage;
+
+public class Ex04 extends Application{
+	public static void main(String[] args) {
+		launch(args);
+	}
+
+	@Override
+	public void start(Stage arg0) throws Exception {
+		AnchorPane anch = new AnchorPane();
+		Label lb1 = new Label("Value");
+		lb1.setFont(new Font(32));
+		lb1.setRotate(48);
+		lb1.setTranslateX(100);
+		lb1.setTranslateY(70);
+		
+		anch.getChildren().add(lb1);
+		anch.setPrefSize(300, 200);
+		
+		arg0.setScene(new Scene(anch));
+		arg0.show();
+	}
+}

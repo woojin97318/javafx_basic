@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+C:\kgitbank\4_JAVA\javafx-workspace\.metadata\.plugins\org.eclipse.jdt.core
+1761551251.index
+2698885262.index
+1885644194.index
+4059460137.index

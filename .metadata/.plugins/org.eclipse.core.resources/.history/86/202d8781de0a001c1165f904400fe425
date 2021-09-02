@@ -1,0 +1,14 @@
+package lambda;
+
+interface Lambda01{
+	public void lam();
+}
+
+class Test01 implements Lambda01 {
+	
+}
+public class Ex01 {
+	public static void main(String[] args) {
+		
+	}
+}

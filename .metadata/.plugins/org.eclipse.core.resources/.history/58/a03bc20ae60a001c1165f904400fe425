@@ -1,0 +1,28 @@
+package quiz;
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+
+public class Quiz02 extends Application{
+	public static void main(String[] args) {
+		launch(args);
+	}
+
+	@Override
+	public void start(Stage arg0) throws Exception {
+		FlowPane fb = new FlowPane();
+		
+		Label lb1 = new Label("Search", new ImageView("/img/search.png"));
+		lb1.setTextFill(Color.SKYBLUE);
+		
+		fb.getChildren().addAll(lb1);
+		
+		arg0.setScene(new Scene(fb));
+		arg0.show();
+	}
+}

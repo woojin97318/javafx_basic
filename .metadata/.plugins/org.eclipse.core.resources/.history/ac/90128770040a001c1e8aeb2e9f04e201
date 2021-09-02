@@ -1,0 +1,62 @@
+package quiz;
+
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
+
+public class Quiz01 extends Application {
+
+	public static void main(String[] args) {
+		launch(args);
+	}
+
+	@Override
+	public void start(Stage arg0) throws Exception {
+		BorderPane bp = new BorderPane();
+		
+		FlowPane topFp = new FlowPane();
+		FlowPane leftFp = new FlowPane();
+		FlowPane centerFp = new FlowPane();
+		GridPane rightGp = new GridPane();
+		FlowPane bottomFp = new FlowPane();
+		
+		topFp.setStyle("-fx-background-color:pink;");
+		leftFp.setStyle("-fx-background-color:blue;");
+		centerFp.setStyle("-fx-background-color:green;");
+		rightGp.setStyle("-fx-background-color:yellow;");
+		bottomFp.setStyle("-fx-background-color:brown;");
+		
+		topFp.setPrefSize(400, 40);
+		leftFp.setPrefSize(100, 135);
+		centerFp.setPrefSize(100, 135);
+		rightGp.setPrefSize(200, 135);
+		bottomFp.setPrefSize(400, 25);
+		
+		topFp.setPadding(new Insets(13, 0, 0, 250));
+		topFp.getChildren().add(new Label("메뉴 홈 로그인"));
+		leftFp.getChildren().add(new Button("메뉴 나열"));
+		
+		bp.setTop(topFp);
+		bp.setLeft(leftFp);
+		bp.setCenter(centerFp);
+		bp.setRight(rightGp);
+		bp.setBottom(bottomFp);
+		
+//		Label lb01 = new Label("메뉴 홈 로그인");
+//		Button leftBtn = new Button("메뉴 나열");
+//		Button centerBtn = new Button("내용 들어가는 곳");
+//		
+//		Button bottomBtn = new Button("바닥글 들어가는 곳");
+		arg0.setResizable(false); // 창 사이즈 고정
+		arg0.setScene(new Scene(bp, 400, 200));
+		arg0.show();
+	}
+
+}
