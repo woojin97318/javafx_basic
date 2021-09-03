@@ -1,7 +1,0 @@
-package ex02;
-
-public class Controller {
-	public Controller() {
-		System.out.println("생성자 실행");
-	}
-}
