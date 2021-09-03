@@ -1,0 +1,5 @@
+package quiz01.loginservice;
+
+public interface LoginService {
+
+}

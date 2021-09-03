@@ -20,24 +20,29 @@ public class Controller implements Initializable{
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		loginBtn.setOnAction(e->{
 			Alert alert = new Alert(AlertType.INFORMATION);
-			alert.setTitle("메시지");
 			if(tfId.getText().isEmpty()) {
-				alert.setContentText("tfId를 입력해야 합니다.");
-				alert.show();
+				msgBox("아이디를 입력해야 합니다.");
+				tfId.requestFocus();
+				tfPw.clear();
 			}else if(tfPw.getText().isEmpty()) {
-				alert.setContentText("tfPw를 입력해야 합니다.");
-				alert.show();
+				msgBox("비밀번호를 입력해야 합니다.");
+				tfPw.requestFocus();
 			}else {
 				MyDB mydb = new MyDB();
-				if(mydb.getTable().containsKey(tfId.getText()) && mydb.getTable().containsValue(tfPw.getText())) {
-					alert.setContentText("로그인 성공");
-					alert.show();
+				if(mydb.getTable().containsKey(tfId.getText()) && mydb.getPassword(tfId.getText()).equals(tfPw.getText()) ) {
+					msgBox("로그인 성공");
 				}else {
-					alert.setContentText("로그인 실패");
-					alert.show();
+					msgBox("로그인 실패");
+					tfId.clear();
+					tfPw.clear();
 				}
 			}
 		});
 	}
 	
+	public void msgBox(String msg) {
+		Alert alert = new Alert(AlertType.INFORMATION);
+		alert.setContentText(msg);
+		alert.show();
+	}
 }

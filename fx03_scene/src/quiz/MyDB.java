@@ -20,4 +20,8 @@ public class MyDB {
 		table.put("for", "for1234");
 		table.put("admin", "admin1234");
 	}
+	
+	public String getPassword(String key) {
+		return table.get(key);
+	}
 }

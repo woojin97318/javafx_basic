@@ -6,8 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="86.0" prefWidth="0.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="quiz.Controller">
+<AnchorPane prefHeight="86.0" prefWidth="0.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quiz.Controller">
    <opaqueInsets>
       <Insets />
    </opaqueInsets>
@@ -16,7 +15,7 @@
    </padding>
    <children>
       <TextField fx:id="tfId" layoutX="14.0" layoutY="22.0" />
-      <Button fx:id="loginBtn" layoutX="175.0" layoutY="23.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="52.0" text="Login" />
-      <PasswordField fx:id="tfPw" alignment="CENTER" layoutX="14.0" layoutY="44.0" />
+      <PasswordField fx:id="tfPw" alignment="TOP_LEFT" layoutX="14.0" layoutY="44.0" />
+      <Button fx:id="loginBtn" layoutX="175.0" layoutY="22.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="46.0" text="Login" />
    </children>
 </AnchorPane>
