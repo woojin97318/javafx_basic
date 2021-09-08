@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="585.0" prefWidth="1084.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quiz.resultbtn.ResultBtnController">
+   <children>
+      <PieChart fx:id="pieChart" layoutX="14.0" layoutY="100.0" prefHeight="300.0" prefWidth="300.0" />
+      <BarChart fx:id="barChart" layoutX="393.0" layoutY="100.0" prefHeight="300.0" prefWidth="300.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <AreaChart fx:id="areaChart" layoutX="784.0" layoutY="100.0" prefHeight="300.0" prefWidth="300.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </AreaChart>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="429.0" layoutY="32.0" text="설문조사 결과" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <VBox alignment="CENTER" layoutX="119.0" layoutY="421.0" prefHeight="81.0" prefWidth="85.0" spacing="5.0">
+         <children>
+            <Label fx:id="lb01" text="10대 : 0명" />
+            <Label fx:id="lb02" text="20대 : 0명" />
+            <Label fx:id="lb03" text="30대 : 0명" />
+            <Label fx:id="lb04" text="40대 : 0명" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="498.0" layoutY="431.0" prefHeight="62.0" prefWidth="85.0" spacing="5.0">
+         <children>
+            <Label fx:id="lb11" text="남성 : 0명" />
+            <Label fx:id="lb12" text="여성 : 0명" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="889.0" layoutY="431.0" prefHeight="62.0" prefWidth="85.0" spacing="5.0">
+         <children>
+            <Label fx:id="lb21" text="해외여행 : 0명" />
+            <Label fx:id="lb22" text="국내여행 : 0명" />
+            <Label fx:id="lb23" text="없음 : 0명" />
+         </children>
+      </VBox>
+      <Label fx:id="lb31" layoutX="450.0" layoutY="521.0" text="설문조사 총 인원 : 0명" textFill="#350db9">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
