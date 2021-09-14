@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Client {
 	public static void main(String[] args) throws UnknownHostException, IOException {
 		Scanner input = new Scanner(System.in);
-		Socket sock = new Socket("210.221.253.215", 12345);//접속할 서버의 ip/port
+		Socket sock = new Socket("192.168.219.107", 10000);//접속할 서버의 ip/port
 		OutputStream out = sock.getOutputStream();
 		DataOutputStream dos = new DataOutputStream(out);
 		
@@ -20,7 +20,7 @@ public class Client {
 		rcv.start();
 
 		while(true) {
-//			System.out.print("송신 문자열 입력 : ");
+			System.out.print("송신 문자열 입력 : ");
 			String data = input.next();
 			dos.writeUTF(data);
 		}

@@ -8,7 +8,7 @@ public class Client01 {
 
 	public static void main(String[] args) throws Exception {
 		// 서버와 접속 시도
-		Socket sock = new Socket("localhost", 12345);
+		Socket sock = new Socket("124.54.116.228", 10000);
 		
 		OutputStream out = sock.getOutputStream();
 		System.out.print("전송할 숫자 입력 : ");
